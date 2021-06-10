@@ -1,0 +1,19 @@
+version: "3.4"
+
+services:
+  crafter-bot:
+    image: benoitj/crafter-bot:latest
+    tty: true
+    env_file:
+      - ../../etc/crafter-bot.env
+    restart: unless-stopped
+    networks:
+      - network-limited
+
+networks:
+  network-limited:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.42.42.0/24
