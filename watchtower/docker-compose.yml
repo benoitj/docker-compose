@@ -1,8 +1,9 @@
 version: "3.4"
 
 services:
-  watchtower:
+  watchtower-crafter-bot:
     image: containrrr/watchtower:latest
     restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    command: -i 120 crafter-bot_crafter-bot_1
