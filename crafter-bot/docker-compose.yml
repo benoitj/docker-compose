@@ -3,6 +3,7 @@ version: "3.4"
 services:
   crafter-bot:
     image: benoitj/crafter-bot:latest
+    stdin_open: true
     tty: true
     env_file:
       - ../../etc/crafter-bot.env
