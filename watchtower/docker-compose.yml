@@ -6,4 +6,4 @@ services:
     restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: -i 120 crafter-bot_crafter-bot_1
+    command: -i 1200 crafter-bot_crafter-bot_1
